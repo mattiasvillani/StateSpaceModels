@@ -10,16 +10,19 @@ This repo contains material for three lectures on state-space models which used 
 - Campagnoli, Petrone and  Petris (2009). [Dynamic Linear Models with R](https://link.springer.com/book/10.1007/b135794). Springer. Used for the R package and uses a notation more common in (Bayesian) statistics.
 
 ## Lectures
-Lecture 1 - Models, Applications and State inference\
-[Slides](Slides/StateSpace_L1.pdf)
+**Lecture 1 - Models, Applications and State inference**\
+Reading: [Slides](https://github.com/mattiasvillani/StateSpaceModels/raw/main/Slides/StateSpace_L1.pdf)\
+Code: [Unobserved components - rucm R package](Code/UnobservedComponentsModel.R) | [Matlab code for Kalman filter](Code/matlab/) | [Julia code for Kalman filter](Code/julia/)
 
-Lecture 2 - Parameter inference and software\
-[Slides](Slides/StateSpace_L2.pdf)
+**Lecture 2 - Parameter inference and software**\
+Reading: [Slides](https://github.com/mattiasvillani/StateSpaceModels/raw/main/Slides/StateSpace_L2.pdf)\
+Code: [demo of the dlm package in R](Code/DLMdemo.R)
 
-Lecture 3 - Non-Gaussian and nonlinear models and the particle filter\
-[Slides](Slides/StateSpace_L3.pdf)
+**Lecture 3 - Non-Gaussian and nonlinear models and the particle filter**\
+Reading: [Slides](https://github.com/mattiasvillani/StateSpaceModels/raw/main/Slides/StateSpace_L3.pdf)\
+Code: [Matlab code for particle filter, EKF etc](Code/matlab/)
 
 ## Computer lab
-[Lab](Lab/StateSpaceLab.pdf)
+[Lab](https://github.com/mattiasvillani/StateSpaceModels/raw/main/Lab/StateSpaceLab.pdf)
 
 

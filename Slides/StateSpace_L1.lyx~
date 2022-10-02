@@ -804,7 +804,13 @@ Unobserved components models
 
 \begin_deeper
 \begin_layout Itemize
-Model a time series as components: mean, trend, season, cycles etc.
+Model a time series as 
+\series bold
+\color blue
+components
+\series default
+\color inherit
+: mean, trend, season, cycles etc.
 \end_layout
 
 \begin_layout Itemize
@@ -1320,14 +1326,22 @@ Note 1:
 \end_inset
 
  is first order Markov: 
-\begin_inset Formula $p(\mathbf{x}_{t}\vert\mathbf{x}_{t-1},...,\mathbf{x}_{1})=p(\mathbf{x}_{t}\vert\mathbf{x}_{t-1})$
+\begin_inset Formula 
+\[
+p(\mathbf{x}_{t}\vert\mathbf{x}_{t-1},...,\mathbf{x}_{1})=p(\mathbf{x}_{t}\vert\mathbf{x}_{t-1})
+\]
+
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Itemize
-Note 2: Conditional on 
+Note 2: 
+\series bold
+Conditional
+\series default
+ on 
 \begin_inset Formula $\mathbf{x}_{t}$
 \end_inset
 
@@ -1336,14 +1350,10 @@ Note 2: Conditional on
 \end_inset
 
  is independent of past observations and states.
-\end_layout
+\begin_inset VSpace medskip
+\end_inset
 
-\begin_layout Itemize
-State space as 
-\series bold
-graphical model
-\series default
-.
+
 \end_layout
 
 \end_deeper
@@ -1362,7 +1372,7 @@ status open
 
 \series bold
 \color orange
-Model structure without control
+State-space model as graphical model
 \end_layout
 
 \end_inset
@@ -1402,7 +1412,7 @@ status open
 
 \series bold
 \color orange
-Model structure with control and parameters
+State-space model as graphical model
 \end_layout
 
 \end_inset
@@ -1471,8 +1481,17 @@ Short hand notation:
 \begin_layout Itemize
 Aim: the 
 \series bold
-filtering distribution of the state
+\color blue
+filtering distribution
+\color inherit
+ 
 \series default
+of the 
+\series bold
+\color blue
+state
+\series default
+\color inherit
  at time 
 \begin_inset Formula $t$
 \end_inset
@@ -1480,63 +1499,85 @@ filtering distribution of the state
 
 \begin_inset Formula 
 \[
-p(\mathbf{x}_{t}\vert\mathbf{y}_{1:t},\mathbf{u}_{1:t})
+p(\mathbf{x}_{t}\vert\mathbf{y}_{1:\textcolor{orange}{t}},\mathbf{u}_{1:t})
 \]
 
-\end_inset
-
-
-\begin_inset VSpace medskip
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-Short hand for the 
+
 \series bold
 \color blue
-posterior
+Filtering = Posterior
 \series default
 \color inherit
  for 
 \begin_inset Formula $\mathbf{x}_{t}$
 \end_inset
 
-
-\begin_inset Formula 
-\[
-\pi(\mathbf{x}_{t})\equiv p(\mathbf{x}_{t}\vert\mathbf{y}_{1:t},\mathbf{u}_{1:t})
-\]
-
+, 
+\series bold
+after
+\series default
+ observing 
+\begin_inset Formula $\boldsymbol{y}_{t}$
 \end_inset
 
 
-\begin_inset VSpace medskip
+\begin_inset Formula 
+\[
+\pi(\mathbf{x}_{t})\equiv p(\mathbf{x}_{t}\vert\mathbf{y}_{1:\textcolor{orange}{t}},\mathbf{u}_{1:t})
+\]
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-Short hand for the 
+
 \series bold
 \color blue
-prior
+Prior
 \series default
 \color inherit
  for 
 \begin_inset Formula $\mathbf{x}_{t}$
 \end_inset
 
-, before the measurement at time 
-\begin_inset Formula $t$
+, 
+\series bold
+before
+\series default
+ observing 
+\begin_inset Formula $\boldsymbol{y}_{t}$
 \end_inset
 
-,
+
 \begin_inset Formula 
 \[
-\bar{\pi}(\mathbf{x}_{t})\equiv p(\mathbf{x}_{t}\vert\mathbf{y}_{1:t-1},\mathbf{u}_{1:t})
+\bar{\pi}(\mathbf{x}_{t})\equiv p(\mathbf{x}_{t}\vert\mathbf{y}_{1:\textcolor{orange}{t-1}},\mathbf{u}_{1:t})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Recall: 
+\series bold
+\color blue
+smoothing distribution
+\series default
+\color inherit
+ conditions on all data
+\begin_inset Formula 
+\[
+p(\mathbf{x}_{t}\vert\mathbf{y}_{1:\textcolor{orange}{T}},\mathbf{u}_{1:T})
 \]
 
 \end_inset
@@ -1605,7 +1646,13 @@ We have not yet observed
 \end_layout
 
 \begin_layout Itemize
-Our beliefs at this stage:
+
+\series bold
+\color blue
+Prior
+\series default
+\color inherit
+ beliefs at this stage:
 \begin_inset Formula 
 \[
 \bar{\pi}(\mathbf{x}_{t})=\int p(\mathbf{x}_{t}\vert\mathbf{u}_{t},\mathbf{x}_{t-1})bel(\mathbf{x}_{t-1})d\mathbf{x}_{t-1}
@@ -1631,9 +1678,24 @@ Now comes the observation
 \begin_layout Itemize
 
 \series bold
-Update your beliefs
+\color blue
+Update
+\color inherit
+ 
 \series default
- using Bayes' theorem:
+to 
+\series bold
+\color blue
+posterior
+\series default
+\color inherit
+ using 
+\series bold
+\color blue
+Bayes' theorem
+\series default
+\color inherit
+:
 \begin_inset Formula 
 \[
 \pi(\mathbf{x}_{t})\propto p(\mathbf{y}_{t}\vert\mathbf{x}_{t})\bar{\pi}(\mathbf{x}_{t}).
@@ -1772,6 +1834,10 @@ Gaussianity
 \begin_deeper
 \begin_layout Itemize
 we can compute the integral in the prediction step analytically
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1793,7 +1859,7 @@ Prediction update
 
 \begin_inset Formula 
 \[
-\overline{\mathrm{bel}}(\mathbf{x}_{t})=N\left(\bar{\mu}_{t},\bar{\Sigma}_{t}\right)
+\bar{\pi}(\mathbf{x}_{t})=N\left(\bar{\mu}_{t},\bar{\Sigma}_{t}\right)
 \]
 
 \end_inset
@@ -1811,7 +1877,7 @@ Measurement update
 
 \begin_inset Formula 
 \[
-\mathrm{bel}(\mathbf{x}_{t})=N\left(\mu_{t},\Sigma_{t}\right)
+\pi(\mathbf{x}_{t})=N\left(\mu_{t},\Sigma_{t}\right)
 \]
 
 \end_inset
@@ -1820,7 +1886,13 @@ Measurement update
 \end_layout
 
 \begin_layout Itemize
-The Kalman filter tells us how to 
+The 
+\series bold
+\color blue
+Kalman filter
+\series default
+\color inherit
+ tells us how to 
 \series bold
 iteratively
 \series default
@@ -1870,12 +1942,11 @@ The Kalman filter
 \color black
 The
 \series bold
- linear Gaussian
-\series default
  
-\series bold
-state-space (LGSS) model
+\color blue
+linear Gaussian state-space (LGSS) model
 \series default
+\color black
 
 \begin_inset Formula 
 \begin{align*}
@@ -1890,9 +1961,11 @@ state-space (LGSS) model
 
 \begin_layout Itemize
 
+\family typewriter
 \series bold
-\color red
+\color orange
 Algorithm
+\family default
 \series default
 \color inherit
  

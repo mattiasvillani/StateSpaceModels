@@ -463,7 +463,7 @@ Estimating model parameters
 
 \begin_deeper
 \begin_layout Itemize
-Two options: Maximum likelihood estimate (MLE) or Bayesian.
+Maximum likelihood estimate (MLE) or Bayesian.
 \end_layout
 
 \begin_layout Itemize
@@ -1051,16 +1051,16 @@ state
 \end_layout
 
 \begin_layout Itemize
-Simulate the state trajectory 
+Simulate state trajectory 
 \series bold
 backward in time 
 \series default
-starting with 
+starting at 
 \begin_inset Formula $x_{T}$
 \end_inset
 
 :
-\size small
+\size footnotesize
 
 \begin_inset Formula 
 \[
@@ -1151,7 +1151,7 @@ Note: FFBS distributions conditions on
 \end_layout
 
 \begin_layout Itemize
-So the FFBS gives the 
+FFBS gives the 
 \emph on
 joint
 \emph default
@@ -1205,12 +1205,10 @@ dlm package in R
 \color black
 The
 \series bold
- linear Gaussian
+\color blue
+ linear Gaussian state-space (LGSS) model
 \series default
- 
-\series bold
-state-space (LGSS) model
-\series default
+\color black
 
 \begin_inset Formula 
 \begin{align*}
@@ -1257,7 +1255,7 @@ dlm
 \begin_inset Formula $Y_{t}$
 \end_inset
 
- are the measurements (a vector).
+ are the measurements.
 \end_layout
 
 \begin_layout Itemize
@@ -1265,7 +1263,7 @@ The
 \family typewriter
 dlm
 \family default
- notation goes back to West and Harrison's yellow DLM bible.
+ notation goes back to West and Harrison's book.
  
 \end_layout
 
@@ -1370,6 +1368,10 @@ Main functions:
 dlm
 \family default
  - creates the dlm model object
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1378,6 +1380,10 @@ dlm
 dlmFilter
 \family default
  - Kalman filtering
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1386,6 +1392,10 @@ dlmFilter
 dlmSmooth
 \family default
  - State smoothing
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
